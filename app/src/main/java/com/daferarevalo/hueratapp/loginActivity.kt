@@ -11,7 +11,7 @@ class loginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
+        //oeee
         val emailRegistro = intent.extras
         val emaila = emailRegistro?.getString("correo")
         val passworda = emailRegistro?.getString("contraseña")
