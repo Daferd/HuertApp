@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.daferarevalo.hueratapp.R
 import kotlinx.android.synthetic.main.activity_registro.*
 
 class registroActivity : AppCompatActivity() {
@@ -33,7 +32,6 @@ class registroActivity : AppCompatActivity() {
             intent.putExtra("contraseña",contrasena)
             startActivity(intent)
             finish()
-
             val nombre = nombreEditText.text.toString()
             val repContrasena = repContraseñaEditText.text.toString()
 
