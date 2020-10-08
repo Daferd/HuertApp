@@ -21,6 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints=""
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
@@ -34,8 +35,10 @@
         android:ems="10"
         android:hint="@string/contraseña"
         android:inputType="textPassword"
+        android:autofillHints=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:maxLength="6"
         app:layout_constraintTop_toBottomOf="@+id/correoEditTextLogin" />
 
     <ImageView
@@ -46,10 +49,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="TODO"
         app:srcCompat="@drawable/logo" />
 
     <Button
-        android:id="@+id/registerButton"
+        android:id="@+id/registrarButton"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
@@ -57,43 +61,61 @@
         android:layout_marginEnd="32dp"
         android:background="@drawable/botton_rounded"
         android:text="@string/registrar"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contrasenaEditTextLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/iniciarSesionButton" />
 
     <ImageButton
         android:id="@+id/imageButton3"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/botton_social"
         app:layout_constraintEnd_toStartOf="@+id/imageButton4"
         app:layout_constraintHorizontal_bias="0.85"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerButton"
-        app:srcCompat="@drawable/ic_google"
-        android:background="@drawable/botton_social"/>
-
-    <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerButton"
-        app:srcCompat="@drawable/ic_facebook"
-        android:background="@drawable/botton_social"/>
+        app:layout_constraintTop_toBottomOf="@+id/registrarButton"
+        app:srcCompat="@drawable/ic_google" />
 
     <ImageButton
         android:id="@+id/imageButton5"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/botton_social"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toEndOf="@+id/imageButton4"
-        app:layout_constraintTop_toBottomOf="@+id/registerButton"
-        app:srcCompat="@drawable/ic_twitter"
-        android:background="@drawable/botton_social"/>
+        app:layout_constraintTop_toBottomOf="@+id/registrarButton"
+        app:srcCompat="@drawable/ic_twitter" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/botton_social"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrarButton"
+        app:srcCompat="@drawable/ic_facebook" />
+
+    <Button
+        android:id="@+id/iniciarSesionButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/botton_rounded"
+        android:text="@string/iniciarsesion"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contrasenaEditTextLogin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
