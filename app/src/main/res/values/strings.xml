@@ -18,6 +18,7 @@
     <string name="lugarNacimiento">Lugar de nacimiento</string>
     <string name="cerrar">Cerrar sesión</string>
     <string name="iniciarsesion">Iniciar sesión</string>
+    <string name="errorCamposVacios">Algunos campos están vacios</string>
 
     <string-array name="ciudadNacimiento">
         <item>Seleccione una ciudad</item>

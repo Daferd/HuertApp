@@ -5,11 +5,23 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+
+    //private var correoLogin = ""
+    //private var passwordLogin = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val datosLogin = intent.extras
+        val correoLogin = datosLogin?.getString("email").toString()
+        val passwordLogin = datosLogin?.getString("password").toString()
+
+        activityMainTextView.text = correoLogin.toString()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -20,10 +32,21 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_cerrar -> {
-                val intent = Intent(this, loginActivity::class.java)
-                startActivity(intent)
+                goToLoginActivity()
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun goToLoginActivity() {
+        val datosLogin = intent.extras
+        val correoLogin = datosLogin?.getString("email").toString()
+        val passwordLogin = datosLogin?.getString("password").toString()
+
+        val intent = Intent(this, loginActivity::class.java)
+        intent.putExtra("correo", correoLogin)
+        intent.putExtra("contrasena", passwordLogin)
+        startActivity(intent)
+        finish()
     }
 }
