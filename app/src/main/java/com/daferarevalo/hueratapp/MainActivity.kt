@@ -8,8 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-
-
     //private var correoLogin = ""
     //private var passwordLogin = ""
 
@@ -19,9 +17,8 @@ class MainActivity : AppCompatActivity() {
 
         val datosLogin = intent.extras
         val correoLogin = datosLogin?.getString("email").toString()
-        val passwordLogin = datosLogin?.getString("password").toString()
 
-        activityMainTextView.text = correoLogin.toString()
+        activityMainTextView.text = correoLogin
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -48,5 +45,12 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("contrasena", passwordLogin)
         startActivity(intent)
         finish()
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        goToLoginActivity()
+        
     }
 }

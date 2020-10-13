@@ -1,8 +1,8 @@
 package com.daferarevalo.hueratapp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 import kotlin.concurrent.timerTask
 
@@ -15,7 +15,7 @@ class splashActivity : AppCompatActivity() {
         timer.schedule(
             timerTask {
                 goToLoginActivity()
-             }, 2000
+            }, 1000
         )
 
     }

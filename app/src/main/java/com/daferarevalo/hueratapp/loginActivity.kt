@@ -32,9 +32,7 @@ class loginActivity : AppCompatActivity() {
         }
 
         registrarButton.setOnClickListener {
-            val intent = Intent(this, registroActivity::class.java)
-            startActivity(intent)
-            finish()
+            goToRegistroActivity()
         }
     }
 
@@ -44,6 +42,12 @@ class loginActivity : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java)
         intent.putExtra("email", emailLogin)
         intent.putExtra("password", passwordLogin)
+        startActivity(intent)
+        finish()
+    }
+
+    private fun goToRegistroActivity() {
+        val intent = Intent(this, registroActivity::class.java)
         startActivity(intent)
         finish()
     }

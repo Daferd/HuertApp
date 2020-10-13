@@ -2,7 +2,7 @@
     <string name="app_name">HuertApp</string>
     <string name="registro">Registro</string>
     <string name="nombre">Nombre</string>
-    <string name="correo">Correo Electrónicico</string>
+    <string name="correo">Correo Electrónico</string>
     <string name="telefono">Teléfono</string>
     <string name="contraseña">Contraseña</string>
     <string name="repContraseña">Repita Contraseña</string>
@@ -15,17 +15,16 @@
     <string name="nadar">Nadar</string>
     <string name="cine">Cine</string>
     <string name="comer">Comer</string>
-    <string name="lugarNacimiento">Lugar de nacimiento</string>
     <string name="cerrar">Cerrar sesión</string>
     <string name="iniciarsesion">Iniciar sesión</string>
     <string name="errorCamposVacios">Algunos campos están vacios</string>
+    <string name="ubicacion">Ubicacion</string>
 
-    <string-array name="ciudadNacimiento">
-        <item>Seleccione una ciudad</item>
-        <item>Pasto</item>
-        <item>Medellín</item>
-        <item>Bogotá</item>
-        <item>Cali</item>
-        <item>Barranquilla</item>
+    <string-array name="ciudadUbicacion">
+        <item>Seleccione una vereda</item>
+        <item>Chuguldí</item>
+        <item>Motilón</item>
+        <item>El Salado</item>
+        <item>Puerchag</item>
     </string-array>
 </resources>

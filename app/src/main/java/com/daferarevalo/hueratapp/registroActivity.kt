@@ -59,10 +59,16 @@ class registroActivity : AppCompatActivity() {
         finish()
     }
 
-    //override fun onBackPressed() {
-    //  super.onBackPressed()
-    //val intent = Intent(this, loginActivity::class.java)
-    //startActivity(intent)
-    // finish()
-    //}
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        val correo = correoEditTextLogin.text.toString()
+        val contrasena = contraseñaEditText.text.toString()
+
+        val intent = Intent(this, loginActivity::class.java)
+        intent.putExtra("correo", correo)
+        intent.putExtra("contrasena", contrasena)
+        startActivity(intent)
+        finish()
+    }
 }
