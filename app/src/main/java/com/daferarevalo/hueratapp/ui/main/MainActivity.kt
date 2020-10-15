@@ -1,10 +1,12 @@
-package com.daferarevalo.hueratapp
+package com.daferarevalo.hueratapp.ui.main
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import com.daferarevalo.hueratapp.R
+import com.daferarevalo.hueratapp.ui.login.loginActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

@@ -1,9 +1,12 @@
-package com.daferarevalo.hueratapp
+package com.daferarevalo.hueratapp.ui.login
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.daferarevalo.hueratapp.R
+import com.daferarevalo.hueratapp.ui.main.MainActivity
+import com.daferarevalo.hueratapp.ui.registro.registroActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 class loginActivity : AppCompatActivity() {
@@ -18,8 +21,8 @@ class loginActivity : AppCompatActivity() {
 
 
         iniciarSesionButton.setOnClickListener {
-            val emailLogin = correoEditTextLogin.text.toString()
-            val passwordLogin = contrasenaEditTextLogin.text.toString()
+            val emailLogin = correo_edit_text_login.text.toString()
+            val passwordLogin = contrasena_edit_text_login.text.toString()
 
             if (emailLogin == empty || passwordLogin == empty) {
                 Toast.makeText(this, "Algunos campos están vacios", Toast.LENGTH_LONG).show()
@@ -37,8 +40,8 @@ class loginActivity : AppCompatActivity() {
     }
 
     private fun goToMainActivity() {
-        val emailLogin = correoEditTextLogin.text.toString()
-        val passwordLogin = contrasenaEditTextLogin.text.toString()
+        val emailLogin = correo_edit_text_login.text.toString()
+        val passwordLogin = contrasena_edit_text_login.text.toString()
         val intent = Intent(this, MainActivity::class.java)
         intent.putExtra("email", emailLogin)
         intent.putExtra("password", passwordLogin)

@@ -1,10 +1,12 @@
-package com.daferarevalo.hueratapp
+package com.daferarevalo.hueratapp.ui.registro
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.daferarevalo.hueratapp.R
+import com.daferarevalo.hueratapp.ui.login.loginActivity
 import kotlinx.android.synthetic.main.activity_registro.*
 
 class registroActivity : AppCompatActivity() {
@@ -25,10 +27,10 @@ class registroActivity : AppCompatActivity() {
 
         registrar_Button.setOnClickListener {
 
-            val correo = correoEditTextLogin.text.toString()
-            val contrasena = contraseñaEditText.text.toString()
-            val nombre = nombreEditText.text.toString()
-            val repContrasena = repContraseñaEditText.text.toString()
+            val correo = correo_edit_text.text.toString()
+            val contrasena = contrasena_edit_text.text.toString()
+            val nombre = nombre_edit_text.text.toString()
+            val repContrasena = repcontrasena_edit_text.text.toString()
             val ciudadNacimiento = ciudadNacimientoSpinner.selectedItem
 
             if (nombre == empty || correo == empty || contrasena == empty || repContrasena == empty)
@@ -44,13 +46,12 @@ class registroActivity : AppCompatActivity() {
             else {
                 goToLoginActivity()
             }
-            //respuestaTextView.text = resources.getString(R.string.respuesta, nombre, correo, ciudadNacimiento)
         }
     }
 
     private fun goToLoginActivity() {
-        val correo = correoEditTextLogin.text.toString()
-        val contrasena = contraseñaEditText.text.toString()
+        val correo = correo_edit_text.text.toString()
+        val contrasena = contrasena_edit_text.text.toString()
 
         val intent = Intent(this, loginActivity::class.java)
         intent.putExtra("correo", correo)
@@ -62,8 +63,8 @@ class registroActivity : AppCompatActivity() {
     override fun onBackPressed() {
         super.onBackPressed()
 
-        val correo = correoEditTextLogin.text.toString()
-        val contrasena = contraseñaEditText.text.toString()
+        val correo = correo_edit_text.text.toString()
+        val contrasena = contrasena_edit_text.text.toString()
 
         val intent = Intent(this, loginActivity::class.java)
         intent.putExtra("correo", correo)
