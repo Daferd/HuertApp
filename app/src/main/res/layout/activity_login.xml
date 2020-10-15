@@ -47,7 +47,8 @@
             android:id="@+id/correo_edit_text_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/correo" />
+            android:hint="@string/correo"
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout

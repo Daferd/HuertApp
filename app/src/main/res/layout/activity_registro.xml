@@ -57,7 +57,8 @@
                 android:id="@+id/correo_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/correo" />
+                android:hint="@string/correo"
+                android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -73,7 +74,8 @@
                 android:id="@+id/contrasena_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/contraseña" />
+                android:hint="@string/contraseña"
+                android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -89,7 +91,8 @@
                 android:id="@+id/repcontrasena_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/repContraseña" />
+                android:hint="@string/repContraseña"
+                android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView

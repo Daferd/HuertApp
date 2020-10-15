@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_clases">
+
+    <fragment
+        android:id="@+id/nav_clases"
+        android:name="com.daferarevalo.hueratapp.ui.clases.ClasesFragment"
+        android:label="@string/clases"
+        tools:layout="@layout/fragment_clases" />
+    <fragment
+        android:id="@+id/nav_biblioisasis"
+        android:name="com.daferarevalo.hueratapp.ui.biblioisais.BiblioIsasisFragment"
+        android:label="@string/biblioisais"
+        tools:layout="@layout/fragment_biblio_isasis" />
+    <fragment
+        android:id="@+id/nav_bprp"
+        android:name="com.daferarevalo.hueratapp.ui.bprp.BprpFragment"
+        android:label="@string/bprp"
+        tools:layout="@layout/fragment_bprp" />
+    <fragment
+        android:id="@+id/nav_bibliomundo"
+        android:name="com.daferarevalo.hueratapp.ui.bibliomundo.BiblioMundoFragment"
+        android:label="@string/bibliomundo"
+        tools:layout="@layout/fragment_biblio_mundo" />
+</navigation>

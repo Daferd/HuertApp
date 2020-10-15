@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.daferarevalo.hueratapp.R
-import com.daferarevalo.hueratapp.ui.main.MainActivity
+import com.daferarevalo.hueratapp.ui.drawer.DrawerActivity
 import com.daferarevalo.hueratapp.ui.registro.registroActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -30,7 +30,7 @@ class loginActivity : AppCompatActivity() {
                 Toast.makeText(this, "El correo o la clave son incorrectos", Toast.LENGTH_SHORT)
                     .show()
             } else {
-                goToMainActivity()
+                goToDrawerActivity()
             }
         }
 
@@ -39,10 +39,10 @@ class loginActivity : AppCompatActivity() {
         }
     }
 
-    private fun goToMainActivity() {
+    private fun goToDrawerActivity() {
         val emailLogin = correo_edit_text_login.text.toString()
         val passwordLogin = contrasena_edit_text_login.text.toString()
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, DrawerActivity::class.java)
         intent.putExtra("email", emailLogin)
         intent.putExtra("password", passwordLogin)
         startActivity(intent)

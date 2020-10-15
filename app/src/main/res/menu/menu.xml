@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_clases"
+            android:icon="@drawable/ic_menu_clases"
+            android:title="@string/clases" />
+        <item
+            android:id="@+id/nav_bprp"
+            android:icon="@drawable/ic_menu_bprp"
+            android:title="@string/bprp" />
+        <item
+            android:id="@+id/nav_biblioisasis"
+            android:icon="@drawable/ic_menu_isais"
+            android:title="@string/biblioisais" />
+        <item
+            android:id="@+id/nav_bibliomundo"
+            android:icon="@drawable/ic_menu_mundo"
+            android:title="@string/bibliomundo" />
+    </group>
+</menu>
