@@ -11,16 +11,11 @@ import kotlinx.android.synthetic.main.activity_registro.*
 
 class registroActivity : AppCompatActivity() {
 
-    companion object {
-        private const val EMPTY = " "
-        private const val SPACE = " "
-    }
 
     @SuppressLint("StringFormatMatches")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro)
-        val empty = ""
         //val datosRecibidos = intent.extras
         //val numeroEnviado = datosRecibidos?.getInt("numero")
         //Toast.makeText(this, "El numero enviado es $numeroEnviado", Toast.LENGTH_SHORT).show()
@@ -31,14 +26,14 @@ class registroActivity : AppCompatActivity() {
             val contrasena = contrasena_edit_text.text.toString()
             val nombre = nombre_edit_text.text.toString()
             val repContrasena = repcontrasena_edit_text.text.toString()
-            val ciudadNacimiento = ciudadNacimientoSpinner.selectedItem
+            val ubicacion = ubicacionSpinner.selectedItem
 
-            if (nombre == empty || correo == empty || contrasena == empty || repContrasena == empty)
+            if (nombre.isEmpty() || correo.isEmpty() || contrasena.isEmpty() || repContrasena.isEmpty())
                 Toast.makeText(this, R.string.errorCamposVacios, Toast.LENGTH_SHORT).show()
             else if (contrasena.length < 6) {
                 Toast.makeText(
                     this,
-                    "La contraseña debe ser de mínimo 6 caracteres",
+                    "La contraseña debe contener mínimo 6 caracteres",
                     Toast.LENGTH_SHORT
                 ).show()
             } else if (contrasena != repContrasena)

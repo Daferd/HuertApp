@@ -12,11 +12,11 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginTop="32dp"
-        android:contentDescription="TODO"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/textView2"
@@ -39,15 +39,22 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="32dp"
+        android:paddingStart="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:paddingEnd="6dp"
+        app:boxStrokeColor="@color/colorAccent"
+        app:errorIconDrawable="@color/cardview_light_background"
+        app:hintTextColor="@android:color/black"
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/correo_edit_text_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_email"
             android:hint="@string/correo"
+            android:drawablePadding="6dp"
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -60,13 +67,19 @@
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/correo_edit_text_layout_login">
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        app:hintTextColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/correo_edit_text_layout_login"
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/contrasena_edit_text_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_lock"
             android:hint="@string/contraseña"
+            android:drawablePadding="6dp"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -79,7 +92,7 @@
         android:layout_marginEnd="32dp"
         android:background="@drawable/botton_rounded"
         android:text="@string/iniciarsesion"
-        android:textColor="#FFFFFF"
+        android:textColor="@android:color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -112,7 +125,8 @@
         app:layout_constraintHorizontal_bias="0.85"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registrarButton"
-        app:srcCompat="@drawable/ic_google" />
+        app:srcCompat="@drawable/ic_google"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/imageButton5"
@@ -124,7 +138,8 @@
         app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toEndOf="@+id/imageButton4"
         app:layout_constraintTop_toBottomOf="@+id/registrarButton"
-        app:srcCompat="@drawable/ic_twitter" />
+        app:srcCompat="@drawable/ic_twitter"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/imageButton4"
@@ -135,6 +150,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registrarButton"
-        app:srcCompat="@drawable/ic_facebook" />
+        app:srcCompat="@drawable/ic_facebook"
+        tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
