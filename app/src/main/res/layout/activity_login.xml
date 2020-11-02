@@ -53,8 +53,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_email"
-            android:hint="@string/correo"
             android:drawablePadding="6dp"
+            android:hint="@string/correo"
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
