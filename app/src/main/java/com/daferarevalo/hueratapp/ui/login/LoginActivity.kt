@@ -19,7 +19,6 @@ class loginActivity : AppCompatActivity() {
         val emailRegistro = datosRegistro?.getString("correo")
         val passwordRegistro = datosRegistro?.getString("contrasena")
 
-
         iniciarSesionButton.setOnClickListener {
             val emailLogin = correo_edit_text_login.text.toString()
             val passwordLogin = contrasena_edit_text_login.text.toString()
